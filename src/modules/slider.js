@@ -25,12 +25,11 @@ const slider = (sectionId, sliderItems, arrow, flag) => {
     }
 
     const render = (currentItem) => {
-        sliderBlockItems.forEach((item, index) => {
 
+        sliderBlockItems.forEach((item, index) => {
             if (index > (currentItem + flag) || index < currentItem) {
-                {
-                    item.style.display = 'none';
-                }
+
+                item.style.display = 'none';
             } else {
                 item.style.display = 'block';
                 if (!flag)

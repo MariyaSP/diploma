@@ -30,7 +30,6 @@ const slider = (sectionId, sliderItems, arrow, flag) => {
             if (index > (currentItem + flag) || index < currentItem) {
                 {
                     item.style.display = 'none';
-
                 }
             } else {
                 item.style.display = 'block';
@@ -49,14 +48,12 @@ const slider = (sectionId, sliderItems, arrow, flag) => {
 
         if (e.target.closest(arrow + '--right')) {
             currentSlide++;
-
         }
         else if (e.target.closest(arrow + '--left')) {
             currentSlide--;
         }
 
         if (currentSlide >= sliderBlockItems.length - flag) {
-
             if (!flag)
                 currentSlide = flag;
             else

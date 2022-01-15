@@ -47,20 +47,25 @@ const slider = (sectionId, sliderItems, arrow, flag) => {
         }
 
         if (e.target.closest(arrow + '--right')) {
-            currentSlide++;
+            currentSlide += flag + 1;
         }
         else if (e.target.closest(arrow + '--left')) {
-            currentSlide--;
+            currentSlide -= flag + 1;
         }
 
-        if (currentSlide >= sliderBlockItems.length - flag) {
-            if (!flag)
-                currentSlide = flag;
+        if (currentSlide >= sliderBlockItems.length) {
+            if (flag)
+                currentSlide = 0;
             else
                 currentSlide = flag + 1;
         }
         if (currentSlide < 0) {
-            currentSlide = 0;
+
+            if (flag) {
+                currentSlide = sliderBlockItems.length - (flag + 1);
+            }
+            else
+                currentSlide = sliderBlockItems.length - 1;
         }
 
         render(currentSlide);

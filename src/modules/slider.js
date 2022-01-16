@@ -29,9 +29,10 @@ const slider = (sectionId, sliderItems, arrow, flag) => {
         sliderBlockItems.forEach((item, index) => {
             if (index > (currentItem + flag) || index < currentItem) {
 
-                item.style.display = 'none';
+                item.classList.add('item__display');
             } else {
-                item.style.display = 'block';
+                item.classList.remove('item__display');
+                
                 if (!flag)
                     item.style.maxWidth = sizeWin + 'px';
             }

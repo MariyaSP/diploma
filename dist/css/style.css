@@ -1619,6 +1619,9 @@ input.error {
   width: 100%;
 }
 
+.item__display {
+  display: none;
+}
 .services-arrows {
   display: flex;
   justify-content: space-between;

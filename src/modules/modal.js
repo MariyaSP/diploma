@@ -1,21 +1,27 @@
-const modal = () => {
-    const headerModal = document.querySelector('.header-modal');
-    const btnModal = document.querySelector('.button');
+const modal = (btnModalClass, windowModalClass) => {
+
+    const btnModal = document.querySelectorAll(btnModalClass);
+    const windowModal = document.querySelector('.' + windowModalClass);
     const overlay = document.querySelector('.overlay');
 
     const visible = (elem, visyStyle) => {
         elem.classList.toggle(visyStyle);
     }
 
-    btnModal.addEventListener('click', (e) => {
-        e.preventDefault();
-        visible(headerModal, 'header-modal');
-        overlay.style.display = 'block';
+    btnModal.forEach(item => {
+
+        item.addEventListener('click', (e) => {
+
+            e.preventDefault();
+            visible(windowModal, windowModalClass);
+            overlay.style.display = 'block';
+        })
+
     })
 
-    headerModal.addEventListener('click', (e) => {
-        if (e.target.classList.contains('header-modal__close')) {
-            visible(headerModal, 'header-modal');
+    windowModal.addEventListener('click', (e) => {
+        if (e.target.classList.contains(windowModalClass+'__close')) {
+            visible(windowModal, windowModalClass);
             overlay.style.display = 'none';
         }
 

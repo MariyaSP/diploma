@@ -72,6 +72,10 @@ const discontForm = () => {
             formBody[key] = val;
         })
 
+        formBody.calcTotal = localStorage.calcTotal;
+
+        console.log(formBody);
+
         if (validate(inputs)) {
 
             sendData(formBody)

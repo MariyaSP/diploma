@@ -1,7 +1,8 @@
-const showCerfificate = () => {
+const showCertificate = () => {
 
 
-    const certificates = document.querySelector('#documents');
-    console.log(certificates);
+    // const documents = document.querySelector('#documents');
+    // const certificates = documents.querySelectorAll('')
+    // console.log(certificates);
 }
-export default showCerfificate;
+export default showCertificate;

@@ -1578,6 +1578,20 @@ input.error {
   color: rgba(0, 0, 0, 0.35);
 }
 
+.documents-modal__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.documents-modal__close:hover {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+
+
 .overlay {
   display: none;
   position: fixed;

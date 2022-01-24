@@ -82,7 +82,7 @@ const modal = (btnModalClass, windowModalClass) => {
 
 
         if (formBody.page == "Балконы") {
-            console.log(document.getElementById('calc-total').value);
+
             if (document.getElementById('calc-total').value !== '') {
                 formBody.calcTotal = document.getElementById('calc-total').value;
             }

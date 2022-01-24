@@ -73,12 +73,12 @@ const discontForm = () => {
         })
 
 
-        if (formBody.page == "Балконы" ) {
-            console.log(document.getElementById('calc-total').value);
-            if(document.getElementById('calc-total').value!=='') {
+        if (formBody.page == "Балконы") {
+
+            if (document.getElementById('calc-total').value !== '') {
                 formBody.calcTotal = document.getElementById('calc-total').value;
             }
-            
+
         }
 
         if (validate(inputs)) {
@@ -98,7 +98,7 @@ const discontForm = () => {
                     setTimeout(() => {
                         statusBlock.textContent = '';
                     }, 5000);
-                    
+
                 })
                 .catch(error => {
                     console.log('Ошибка');

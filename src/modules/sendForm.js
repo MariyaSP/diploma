@@ -72,13 +72,11 @@ const discontForm = () => {
             formBody[key] = val;
         })
 
-
         if (formBody.page == "Балконы") {
 
             if (document.getElementById('calc-total').value !== '') {
                 formBody.calcTotal = document.getElementById('calc-total').value;
             }
-
         }
 
         if (validate(inputs)) {

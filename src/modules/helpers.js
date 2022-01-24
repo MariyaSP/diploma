@@ -1,5 +1,5 @@
-const discontForm = () => {
-    const forms = document.querySelectorAll('.form-horizontal');
+const sendData = (classForm = '.form-horizontal', dataSubject = '') => {
+    const forms = document.querySelectorAll(classForm);
     const statusBlock = document.createElement('div');
 
     const validate = (list) => {
@@ -73,12 +73,12 @@ const discontForm = () => {
         })
 
 
-        if (formBody.page == "Балконы" ) {
+        if (formBody.page == "Балконы") {
             console.log(document.getElementById('calc-total').value);
-            if(document.getElementById('calc-total').value!=='') {
+            if (document.getElementById('calc-total').value !== '') {
                 formBody.calcTotal = document.getElementById('calc-total').value;
             }
-            
+
         }
 
         if (validate(inputs)) {
@@ -98,7 +98,7 @@ const discontForm = () => {
                     setTimeout(() => {
                         statusBlock.textContent = '';
                     }, 5000);
-                    
+
                 })
                 .catch(error => {
                     console.log('Ошибка');
@@ -138,4 +138,4 @@ const discontForm = () => {
 
 }
 
-export default discontForm;
+export { sendData }
